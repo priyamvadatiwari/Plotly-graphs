@@ -1,16 +1,11 @@
-#****************************************************************
-#Name:Priyamvada Tiwari
-#Student Number:A00237130
 
-#ANA1001 Assignment 11
-#****************************************************************
 import json
 from datetime import datetime
 import matplotlib.pyplot as plt
 from plotly.graph_objects import Bar, layout
 
 
-'''Question - 1.Pick two places and download temperature data and time for both create a dictionary using the following format temps = {“time”:[],“place1”:[],”place2”:[]} and save this data to a json file called temps.json. In order to match up, you will need to write the time, then the two temps, and repeat. Log enough data that you are able to do an analysis over time (Minimum 5 days of data). Read the JSON file and create a graph with labels showing both sets of temperature data (y-axis) and time series (x-axis), make sure to include labels for the chart, x and y axes.'''
+'''Pick two places and download temperature data and time for both create a dictionary using the following format temps = {“time”:[],“place1”:[],”place2”:[]} and save this data to a json file called temps.json. In order to match up, you will need to write the time, then the two temps, and repeat. Log enough data that you are able to do an analysis over time (Minimum 5 days of data). Read the JSON file and create a graph with labels showing both sets of temperature data (y-axis) and time series (x-axis), make sure to include labels for the chart, x and y axes.'''
 
 import csv
    
@@ -68,7 +63,7 @@ fig.autofmt_xdate()
 plt.savefig("Sudbury-Jax-Temperatures.jpg")
 
 
-'''Question 2: Generate a  visualization using synthetically generated data of your choice (not weather related , could be csv or json).
+'''Generate a  visualization using synthetically generated data of your choice (not weather related , could be csv or json).
 
 revenueHistoryFile = "Revenue History.csv"
 revenues = []
@@ -96,7 +91,7 @@ fig.autofmt_xdate()
 plt.show()'''
 
 
-'''Question 3: Use Earthquake.csv (attached) and create a Scattergeo visualization using Plotly, which shows the magnitudes of all the earthquakes in the csv file. Use the fields latitude and longitude from within the csv to plot the locations.'''
+'''Use Earthquake.csv (attached) and create a Scattergeo visualization using Plotly, which shows the magnitudes of all the earthquakes in the csv file. Use the fields latitude and longitude from within the csv to plot the locations.'''
 
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
@@ -139,7 +134,7 @@ with open(filename_eq) as file_object:
   figure = {'data': data, 'layout': my_layout}
   offline.plot(figure, filename = 'eqMap.html')
 
-'''Question 4: Use Earthquake.csv (attached) and create a histogram(like we studied last week) of all the depths in the csv file.'''
+'''Use Earthquake.csv (attached) and create a histogram(like we studied last week) of all the depths in the csv file.'''
 
 
 filename = 'Earthquake.csv'
